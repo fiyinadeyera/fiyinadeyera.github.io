@@ -890,6 +890,340 @@
     border-bottom-color: #4B5563;
   }
 
+
+
+  /* ══════════════════════════════════════════════════════════════ */
+  /* COMPLETE DARK MODE STYLING FOR EVERYTHING */
+  /* ══════════════════════════════════════════════════════════════ */
+
+  :root.dark-mode {
+    --teal: #0D9488;
+    --teal-light: #CCFBF1;
+    --teal-dark: #0F766E;
+    --teal-muted: #F0FDFA;
+    --black: #FFFFFF;
+    --gray-900: #E5E7EB;
+    --gray-700: #D1D5DB;
+    --gray-500: #9CA3AF;
+    --gray-300: #4B5563;
+    --gray-100: #1F2937;
+    --white: #0A0A0A;
+  }
+
+  /* BASE */
+  :root.dark-mode * {
+    color: #E5E7EB;
+  }
+
+  :root.dark-mode body {
+    background: #0A0A0A;
+    color: #E5E7EB;
+  }
+
+  :root.dark-mode html {
+    background: #0A0A0A;
+  }
+
+  /* HEADINGS */
+  :root.dark-mode h1,
+  :root.dark-mode h2,
+  :root.dark-mode h3,
+  :root.dark-mode h4,
+  :root.dark-mode h5,
+  :root.dark-mode h6 {
+    color: #FFFFFF;
+  }
+
+  /* TEXT */
+  :root.dark-mode p,
+  :root.dark-mode li,
+  :root.dark-mode label,
+  :root.dark-mode span,
+  :root.dark-mode a {
+    color: #E5E7EB;
+  }
+
+  /* LINKS */
+  :root.dark-mode a {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode a:hover {
+    color: #A7F3D0;
+  }
+
+  /* SECTIONS */
+  :root.dark-mode section {
+    background: #0A0A0A;
+  }
+
+  :root.dark-mode .section-label {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .section-title {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .section-sub {
+    color: #D1D5DB;
+  }
+
+  /* NAVIGATION */
+  :root.dark-mode nav {
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid #4B5563;
+  }
+
+  :root.dark-mode .nav-logo {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .nav-links a {
+    color: #9CA3AF;
+  }
+
+  :root.dark-mode .nav-links a:hover {
+    color: #CCFBF1;
+  }
+
+  /* HERO */
+  :root.dark-mode .hero-eyebrow {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .hero h1 {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .hero h1 em {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .hero-bio {
+    color: #D1D5DB;
+  }
+
+  :root.dark-mode .hero-photo-bg {
+    background: rgba(13, 148, 136, 0.1);
+  }
+
+  /* BUTTONS */
+  :root.dark-mode .btn-primary {
+    background: #0D9488;
+    color: white;
+  }
+
+  :root.dark-mode .btn-secondary {
+    background: transparent;
+    border: 1.5px solid #4B5563;
+    color: #D1D5DB;
+  }
+
+  :root.dark-mode .btn-secondary:hover {
+    border-color: #CCFBF1;
+    color: #CCFBF1;
+  }
+
+  /* METRICS */
+  :root.dark-mode .metrics {
+    background: #111827;
+  }
+
+  :root.dark-mode .metric {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  :root.dark-mode .metric-num {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .metric-label {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* CARDS */
+  :root.dark-mode .case-card {
+    background: #111827;
+    border: 1px solid #4B5563;
+  }
+
+  :root.dark-mode .case-card h3 {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .case-card p {
+    color: #D1D5DB;
+  }
+
+  :root.dark-mode .case-card-header {
+    border-color: #4B5563;
+  }
+
+  :root.dark-mode .case-tag {
+    background: #1F2937;
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .case-metric-num {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .case-metric-label {
+    color: #9CA3AF;
+  }
+
+  :root.dark-mode .case-link {
+    color: #CCFBF1;
+  }
+
+  /* EXPERIENCE */
+  :root.dark-mode .experience {
+    background: #111827;
+  }
+
+  :root.dark-mode .exp-item {
+    border-color: #4B5563;
+  }
+
+  :root.dark-mode .exp-company {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .exp-role {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .exp-location,
+  :root.dark-mode .exp-period {
+    color: #9CA3AF;
+  }
+
+  :root.dark-mode .exp-bullets li {
+    color: #D1D5DB;
+  }
+
+  /* SKILLS */
+  :root.dark-mode .beh-card {
+    background: #1F2937;
+    border: 1px solid #4B5563;
+  }
+
+  :root.dark-mode .beh-card h4 {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .beh-card p {
+    color: #D1D5DB;
+  }
+
+  :root.dark-mode .beh-tag {
+    color: #CCFBF1;
+  }
+
+  /* EDUCATION */
+  :root.dark-mode .edu {
+    background: #0A0A0A;
+  }
+
+  :root.dark-mode .edu-card {
+    background: #111827;
+    border: 1px solid #4B5563;
+  }
+
+  :root.dark-mode .edu-degree {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .edu-school {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .edu-year,
+  :root.dark-mode .edu-note {
+    color: #9CA3AF;
+    border-color: #4B5563;
+  }
+
+  /* CONTACT FOOTER */
+  :root.dark-mode .contact,
+  :root.dark-mode footer {
+    background: #111827;
+  }
+
+  :root.dark-mode .contact .section-label {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .contact .section-title {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .contact .section-sub {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  :root.dark-mode .contact-link {
+    color: white;
+  }
+
+  :root.dark-mode footer p {
+    color: rgba(255, 255, 255, 0.25);
+  }
+
+  /* BLOCKQUOTE */
+  :root.dark-mode blockquote {
+    border-color: #CCFBF1;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  /* TIMELINE */
+  :root.dark-mode .tl-year {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .tl-line {
+    background: #CCFBF1;
+  }
+
+  :root.dark-mode .tl-dot {
+    background: #CCFBF1;
+  }
+
+  :root.dark-mode .tl-type {
+    color: #CCFBF1;
+  }
+
+  :root.dark-mode .tl-title {
+    color: #FFFFFF;
+  }
+
+  :root.dark-mode .tl-sub {
+    color: #9CA3AF;
+  }
+
+  :root.dark-mode .tl-content {
+    color: #D1D5DB;
+  }
+
+  /* ABOUT SECTION */
+  :root.dark-mode .about {
+    background: #111827;
+  }
+
+  :root.dark-mode .about-text p {
+    color: #D1D5DB;
+  }
+
+  /* FADE IN */
+  :root.dark-mode .fade-in {
+    opacity: 0;
+  }
+
+  :root.dark-mode .fade-in.visible {
+    opacity: 1;
+  }
+
 </style>
 </head>
 <body>
