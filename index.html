@@ -813,7 +813,7 @@
 </style>
 </head>
 <body>
-<button class="theme-toggle" id="themeToggle" title="Toggle dark mode"><span id="themeIcon">🌙</span></button>
+<button class="theme-toggle" id="themeToggle" title="Toggle dark mode"><span id="themeIcon">💡</span></button>
 
 <!-- NAV -->
 <nav>
@@ -1269,8 +1269,10 @@
 </body>
 </html>
 
+
 <script>
   const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
   const html = document.documentElement;
   const savedTheme = localStorage.getItem('theme');
   
@@ -1280,9 +1282,9 @@
   if (shouldBeDark) {
     html.classList.add('dark-mode');
     themeToggle.classList.add('active');
-    document.getElementById('themeIcon').textContent = '☀️';
+    themeIcon.textContent = '';
   } else {
-    document.getElementById('themeIcon').textContent = '🌙';
+    themeIcon.textContent = '💡';
   }
   
   themeToggle.addEventListener('click', () => {
@@ -1291,10 +1293,10 @@
     
     if (html.classList.contains('dark-mode')) {
       localStorage.setItem('theme', 'dark');
-      document.getElementById('themeIcon').textContent = '☀️';
+      themeIcon.textContent = '';
     } else {
       localStorage.setItem('theme', 'light');
-      document.getElementById('themeIcon').textContent = '🌙';
+      themeIcon.textContent = '💡';
     }
   });
 </script>
