@@ -863,22 +863,21 @@
 
 <!-- NAV -->
 <nav>
-  <div class="nav-inner">
+  <div class="nav-inner" style="display: flex; justify-content: space-between; align-items: center;">
     <a href="#" class="nav-logo">Fiyin Adeyera</a>
-    <ul class="nav-links">
-      
-      <li><a href="#work">Work</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-      <div style="display: flex; gap: 1rem;">
-        <a href="resume.pdf" download class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Resume</a>
-        <button class="theme-toggle" id="themeToggle" style="padding: 0.5rem 0.75rem;">
-          <span id="themeIcon">🌙</span>
-        </button>
+    <div style="display: flex; align-items: center; gap: 2rem;">
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <a href="resume.pdf" download class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem; white-space: nowrap;">Resume</a>
+        <button class="theme-toggle" id="themeToggle" style="padding: 0.5rem 0.75rem;"><span id="themeIcon">🌙</span></button>
       </div>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -920,11 +919,11 @@
       <div>
         <div class="section-label">Currently Building</div>
         <h2 class="section-title">Signal Rank</h2>
-        <p style="color: var(--gray-500); font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">AI event recommendation app. Python • Flask • Claude API. <a href="https://signalrank.replit.dev" target="_blank" style="color: var(--teal); text-decoration: none; font-weight: 600;">Live →</a></p>
+        <p style="color: var(--gray-500); font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">AI event recommendation. Python • Flask • Claude API. <a href="https://signalrank.replit.dev" target="_blank" style="color: var(--teal); font-weight: 600;">Live →</a></p>
       </div>
       <div style="background: white; padding: 2rem; border-radius: var(--radius); text-align: center; border: 1px solid var(--gray-100);">
         <p style="font-size: 2.5rem; margin-bottom: 0.5rem;">✨</p>
-        <p style="font-size: 0.9rem; color: var(--gray-500);">First full-stack app built with Claude Code</p>
+        <p style="font-size: 0.9rem; color: var(--gray-500);">Built with Claude Code</p>
       </div>
     </div>
   </div>
