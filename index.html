@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark-mode">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -838,11 +838,59 @@
   .dark-mode .hero-bio {
     color: #D1D5DB;
   }
+
+
+  /* Comprehensive dark mode styling */
+  :root.dark-mode {
+    --black: #FFFFFF;
+    --gray-900: #E5E7EB;
+    --gray-700: #D1D5DB;
+    --gray-500: #9CA3AF;
+    --gray-300: #4B5563;
+    --gray-100: #1F2937;
+    --white: #0A0A0A;
+  }
+
+  :root.dark-mode body {
+    background: #0A0A0A;
+    color: #E5E7EB;
+  }
+
+  :root.dark-mode h1,
+  :root.dark-mode h2,
+  :root.dark-mode h3,
+  :root.dark-mode h4,
+  :root.dark-mode h5,
+  :root.dark-mode h6 {
+    color: #FFFFFF !important;
+  }
+
+  :root.dark-mode p,
+  :root.dark-mode li,
+  :root.dark-mode label {
+    color: #D1D5DB !important;
+  }
+
+  :root.dark-mode .section-label {
+    color: #CCFBF1 !important;
+  }
+
+  :root.dark-mode section {
+    background: #0A0A0A;
+  }
+
+  :root.dark-mode .about,
+  :root.dark-mode .experience,
+  :root.dark-mode .gray-100 {
+    background: #111827;
+  }
+
+  :root.dark-mode nav {
+    background: rgba(10, 10, 10, 0.95);
+    border-bottom-color: #4B5563;
+  }
+
 </style>
 </head>
 <body>
 
-<script>
-  // Keep dark mode on by default
-  document.documentElement.classList.add('dark-mode');
-</script>
