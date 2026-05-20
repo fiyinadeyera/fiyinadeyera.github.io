@@ -727,6 +727,49 @@
   }
 </style>
 
+  /* ── iOS TOGGLE SWITCH ── */
+  .theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 56px;
+    height: 32px;
+    background: #ccc;
+    border: none;
+    border-radius: 16px;
+    padding: 2px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-toggle.active {
+    background: var(--teal);
+  }
+
+  .theme-toggle span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .theme-toggle.active span {
+    transform: translateX(24px);
+  }
+
+  .dark-mode .theme-toggle.active {
+    background: var(--teal);
+  }
+
   /* ── DARK MODE ── */
   :root.dark-mode {
     --black: #FFFFFF;
@@ -769,41 +812,6 @@
     border-bottom-color: #4B5563;
   }
 
-  /* Floating theme toggle */
-  .theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    background: var(--white);
-    border: 2px solid var(--gray-300);
-    color: var(--gray-700);
-    padding: 0.6rem;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1.25rem;
-    transition: all 0.3s;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-
-  .theme-toggle:hover {
-    border-color: var(--teal);
-    transform: scale(1.15);
-    box-shadow: 0 8px 20px rgba(13,148,136,0.2);
-  }
-
-  .dark-mode .theme-toggle {
-    background: #111827;
-    border-color: #4B5563;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-
-  .dark-mode .theme-toggle:hover {
     border-color: var(--teal);
     box-shadow: 0 8px 20px rgba(13,148,136,0.3);
   }
@@ -836,6 +844,10 @@
         View My Work
         <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
+      <a href="resume.pdf" download class="btn-secondary" style="display: inline-flex; align-items: center; gap: 8px;">
+        Download Resume
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8m-4-6l-4-4m0 0L8 6m4-4v12"/></svg>
+      </a>
       <a href="#contact" class="btn-secondary">Get in Touch</a>
     </div>
   </div>
@@ -856,6 +868,22 @@
 
 
 <!-- CASE STUDIES -->
+
+<!-- CURRENTLY BUILDING -->
+<section style="padding: 60px 2rem; background: var(--gray-100);">
+  <div class="section-inner">
+    <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: center;">
+      <div>
+        <div class="section-label">Currently Building</div>
+        <h2 class="section-title">Signal Rank</h2>
+        <p style="color: var(--gray-500); font-size: 1rem; line-height: 1.6;">AI event recommendation system. Python • Flask • Claude API. <a href="https://signalrank.replit.dev" target="_blank" style="color: var(--teal); font-weight: 600;">Live →</a></p>
+      </div>
+      <div style="background: white; padding: 2rem; border-radius: 12px; text-align: center; border: 1px solid var(--gray-100);">
+        <p style="font-size: 0.9rem; color: var(--gray-500);">First full-stack project</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="work">
   <div class="section-inner">
     <div class="section-label">Case Studies</div>
@@ -1241,54 +1269,36 @@
   <p>© 2025 Fiyin Adeyera · Built for GitHub Pages · Jersey City, NJ</p>
 </footer>
 
-<script>
-  // Fix hero section layout (inline style override)
-  const heroSection = document.querySelector('.hero');
-  if (heroSection) {
-    heroSection.style.cssText = '';
-  }
-
-  // Load headshot properly
-  const img = document.querySelector('.hero-photo');
-  if (img) {
-    
-    img.onerror = function() {
-      // fallback to initials
-      this.style.display = 'none';
-      const wrap = this.parentElement;
-      const initials = document.createElement('div');
-      initials.style.cssText = 'width:320px;height:380px;border-radius:180px 180px 140px 140px;background:var(--teal-muted);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:4rem;color:var(--teal);position:relative;z-index:1;';
-      initials.textContent = 'FA';
-      wrap.appendChild(initials);
-    };
-  }
-
-  // Intersection observer for fade-ins
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.08 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Smooth active nav
-  const sections = document.querySelectorAll('section[id], div[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => {
-      if (window.scrollY >= s.offsetTop - 100) current = s.id;
-    });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--teal)' : '';
-    });
-  });
-</script>
 <script>  const themeToggle = document.getElementById('themeToggle');  const themeIcon = document.getElementById('themeIcon');  const html = document.documentElement;  const savedTheme = localStorage.getItem('theme');  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {    html.classList.add('dark-mode');    themeIcon.textContent = '☀️';  }    themeToggle.addEventListener('click', () => {    html.classList.toggle('dark-mode');    if (html.classList.contains('dark-mode')) {      localStorage.setItem('theme', 'dark');      themeIcon.textContent = '☀️';    } else {      localStorage.setItem('theme', 'light');      themeIcon.textContent = '🌙';    }  });</script>
 </body>
 </html>
+
+<script>
+  const themeToggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem('theme');
+  
+  // Default to dark mode
+  const shouldBeDark = savedTheme === 'dark' || savedTheme === null;
+  
+  if (shouldBeDark) {
+    html.classList.add('dark-mode');
+    themeToggle.classList.add('active');
+    document.getElementById('themeIcon').textContent = '☀️';
+  } else {
+    document.getElementById('themeIcon').textContent = '🌙';
+  }
+  
+  themeToggle.addEventListener('click', () => {
+    html.classList.toggle('dark-mode');
+    themeToggle.classList.toggle('active');
+    
+    if (html.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+      document.getElementById('themeIcon').textContent = '☀️';
+    } else {
+      localStorage.setItem('theme', 'light');
+      document.getElementById('themeIcon').textContent = '🌙';
+    }
+  });
+</script>
