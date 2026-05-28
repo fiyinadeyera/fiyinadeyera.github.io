@@ -1148,6 +1148,80 @@ nav {
 }
 .era-modern .case-quote-attr { color: #9ca3af; }
 .era-retro .case-quote-attr  { color: #00ffff; font-weight: bold; }
+
+/* ─────────────────────────────────────────────
+   MOBILE RESPONSIVE (max-width: 768px)
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Nav: hide links, keep logo + toggle */
+  .era-modern .nav-links { display: none; }
+  .era-modern nav { padding: 0 1.25rem; }
+  .era-modern .nav-inner { height: 56px; }
+  .era-modern .toggle-btn { font-size: 0.72rem; padding: 0.45rem 0.85rem; }
+
+  /* Hero: single column, photo below text */
+  .era-modern .hero {
+    grid-template-columns: 1fr;
+    padding: 80px 1.25rem 60px;
+    gap: 2.5rem;
+    text-align: left;
+  }
+  .era-modern .hero-photo-side { order: -1; justify-content: flex-start; }
+  .era-modern .hero-photo { width: 100px; height: 100px; }
+
+  /* Sections: reduce padding */
+  .era-modern section { padding: 60px 1.25rem; }
+  .era-modern .section-inner { padding: 0; }
+
+  /* Timeline: tighter on mobile */
+  .tl-item { grid-template-columns: 38px 16px 1fr; gap: 0 0.6rem; }
+  .era-modern .tl-year { font-size: 0.68rem; }
+  .era-modern .tl-title { font-size: 0.85rem; }
+  .era-modern .tl-sub { font-size: 0.78rem; }
+  .era-modern .tl-impact { font-size: 0.76rem; }
+
+  /* Skills: stack */
+  .era-modern .skills-slim-grid { grid-template-columns: 1fr; }
+  .era-modern .skills-slim-list { border-top: none; padding-top: 0; padding-bottom: 1rem; }
+  .era-modern .skills-slim-domain { padding-bottom: 0.2rem; }
+
+  /* AI grid: single column */
+  .era-modern .ai-grid { grid-template-columns: 1fr; }
+
+  /* Contact links: stack */
+  .era-modern .contact-links { gap: 0.75rem; }
+  .era-modern .contact-link { font-size: 0.875rem; }
+
+  /* Behance grid: 2 cols */
+  .era-modern .behance-grid { grid-template-columns: 1fr 1fr; }
+
+  /* Footer */
+  footer { font-size: 0.72rem; padding: 1rem 1.25rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  /* Hero: even tighter */
+  .era-modern .hero { padding: 64px 1rem 48px; }
+  .era-modern section { padding: 48px 1rem; }
+
+  /* Behance: single col on very small */
+  .era-modern .behance-grid { grid-template-columns: 1fr; }
+
+  /* Nav */
+  .era-modern nav { padding: 0 1rem; }
+  .era-modern .toggle-btn { font-size: 0.68rem; padding: 0.4rem 0.75rem; }
+}
+
+/* Retro mobile */
+@media (max-width: 768px) {
+  .era-retro nav { padding: 0 1rem; }
+  .era-retro .nav-links { display: none; }
+  .era-retro .hero-retro { padding: 60px 1rem 40px; }
+  .era-retro section { padding: 40px 1rem; }
+  .era-retro .case-grid { grid-template-columns: 1fr; }
+}
+
 </style>
 </head>
 <body>
