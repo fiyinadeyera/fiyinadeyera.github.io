@@ -435,7 +435,7 @@ nav {
 .era-retro .section-inner { max-width: 900px; margin: 0 auto; }
 
 .era-modern .section-label {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -524,29 +524,31 @@ nav {
 .timeline { display: flex; flex-direction: column; gap: 0; }
 .tl-item {
   display: grid;
-  grid-template-columns: 60px 1fr;
-  gap: 0 1.25rem;
-  position: relative;
+  grid-template-columns: 48px 20px 1fr;
+  gap: 0 0.85rem;
 }
-.era-modern .tl-year-col { display: flex; flex-direction: column; align-items: center; }
 .era-modern .tl-year {
   font-size: 0.72rem; font-weight: 700; color: #0D9488;
-  letter-spacing: 0.04em; padding-top: 2px; white-space: nowrap;
+  letter-spacing: 0.04em; text-align: right; padding-top: 1px;
+  white-space: nowrap; line-height: 1.4;
 }
-.era-modern .tl-line {
-  width: 2px; flex: 1; background: #CCFBF1;
-  margin-top: 8px; min-height: 32px;
+.era-modern .tl-connector {
+  display: flex; flex-direction: column; align-items: center;
 }
 .era-modern .tl-dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: #0D9488; margin-top: 4px; flex-shrink: 0;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #0D9488; flex-shrink: 0; margin-top: 3px;
 }
-.era-modern .tl-dot.edu { background: #d1d5db; border: 2px solid #9ca3af; }
+.era-modern .tl-dot.edu { background: #fff; border: 2px solid #9ca3af; }
+.era-modern .tl-line {
+  width: 2px; flex: 1; background: #CCFBF1; min-height: 24px; margin-top: 4px;
+}
 .era-modern .tl-content { padding-bottom: 1.75rem; }
-.era-modern .tl-type { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.15rem; }
-.era-modern .tl-type.work { color: #0D9488; }
-.era-modern .tl-type.edu  { color: #9ca3af; }
-.era-modern .tl-title { font-weight: 600; font-size: 0.9rem; color: #111827; margin-bottom: 0.15rem; }
+.era-modern .tl-type {
+  font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: #9ca3af; margin-bottom: 0.1rem;
+}
+.era-modern .tl-title { font-weight: 600; font-size: 0.9rem; color: #111827; margin-bottom: 0.15rem; line-height: 1.4; }
 .era-modern .tl-sub   { font-size: 0.82rem; color: #6b7280; }
 
 .era-retro .tl-year-col { display: flex; flex-direction: column; align-items: center; }
@@ -1443,13 +1445,9 @@ src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK
     <div class="exp-timeline modern-only">
 
       <div class="tl-item">
-        <div class="tl-year-col">
-          <span class="tl-year">2026</span>
-          <div class="tl-line"></div>
-          <div class="tl-dot work"></div>
-        </div>
+        <span class="tl-year">2026</span>
+        <div class="tl-connector"><div class="tl-dot work"></div><div class="tl-line"></div></div>
         <div class="tl-content">
-          <div class="tl-type work">Work</div>
           <div class="tl-title">Product Consultant · Taproot Foundation</div>
           <div class="tl-sub">Remote, USA · Present</div>
           <div class="tl-impact">Consulting on product and digital strategy for nonprofits.</div>
@@ -1457,26 +1455,18 @@ src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK
       </div>
 
       <div class="tl-item">
-        <div class="tl-year-col">
-          <span class="tl-year">2024</span>
-          <div class="tl-line"></div>
-          <div class="tl-dot edu"></div>
-        </div>
+        <span class="tl-year">2024</span>
+        <div class="tl-connector"><div class="tl-dot edu"></div><div class="tl-line"></div></div>
         <div class="tl-content">
-          <div class="tl-type edu">Education</div>
           <div class="tl-title">MS Product Development · Rochester Institute of Technology</div>
           <div class="tl-sub">Rochester, NY · 2024–2025</div>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-year-col">
-          <span class="tl-year">2023</span>
-          <div class="tl-line"></div>
-          <div class="tl-dot work"></div>
-        </div>
+        <span class="tl-year">2023</span>
+        <div class="tl-connector"><div class="tl-dot work"></div><div class="tl-line"></div></div>
         <div class="tl-content">
-          <div class="tl-type work">Work</div>
           <div class="tl-title">Product Manager · Coolbet / GAN Limited</div>
           <div class="tl-sub">Tallinn, Estonia · 2023–2024</div>
           <div class="tl-impact">400K+ transactions. Identity rollout across 57K users. Multiple payment provider integrations.</div>
@@ -1484,13 +1474,9 @@ src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK
       </div>
 
       <div class="tl-item">
-        <div class="tl-year-col">
-          <span class="tl-year">2021</span>
-          <div class="tl-line"></div>
-          <div class="tl-dot work"></div>
-        </div>
+        <span class="tl-year">2021</span>
+        <div class="tl-connector"><div class="tl-dot work"></div><div class="tl-line"></div></div>
         <div class="tl-content">
-          <div class="tl-type work">Work</div>
           <div class="tl-title">Product Manager · Zageno GmbH</div>
           <div class="tl-sub">Berlin, Germany · 2021–2023</div>
           <div class="tl-impact">Reduced checkout friction by 50% with virtual card integration. Built finance reporting to catch AP issues early.</div>
@@ -1498,26 +1484,18 @@ src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK
       </div>
 
       <div class="tl-item">
-        <div class="tl-year-col">
-          <span class="tl-year">2018</span>
-          <div class="tl-line"></div>
-          <div class="tl-dot edu"></div>
-        </div>
+        <span class="tl-year">2018</span>
+        <div class="tl-connector"><div class="tl-dot edu"></div><div class="tl-line"></div></div>
         <div class="tl-content">
-          <div class="tl-type edu">Education</div>
           <div class="tl-title">M.Eng. Human-Computer Interaction · Tallinn University</div>
           <div class="tl-sub">Tallinn, Estonia · 2018–2021</div>
         </div>
       </div>
 
       <div class="tl-item">
-        <div class="tl-year-col">
-          <span class="tl-year">2015</span>
-          <div class="tl-line"></div>
-          <div class="tl-dot work"></div>
-        </div>
+        <span class="tl-year">2015</span>
+        <div class="tl-connector"><div class="tl-dot work"></div><div class="tl-line"></div></div>
         <div class="tl-content">
-          <div class="tl-type work">Work</div>
           <div class="tl-title">Business Analyst · Ventures Platform</div>
           <div class="tl-sub">Abuja, Nigeria · 2015–2018</div>
           <div class="tl-impact">Portfolio analysis and due diligence for early-stage African startups.</div>
@@ -1525,13 +1503,9 @@ src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK
       </div>
 
       <div class="tl-item">
-        <div class="tl-year-col">
-          <span class="tl-year">2010</span>
-          <div class="tl-line"></div>
-          <div class="tl-dot edu"></div>
-        </div>
+        <span class="tl-year">2010</span>
+        <div class="tl-connector"><div class="tl-dot edu"></div></div>
         <div class="tl-content">
-          <div class="tl-type edu">Education</div>
           <div class="tl-title">B.Sc. Architecture &amp; Entrepreneurship · Covenant University</div>
           <div class="tl-sub">Nigeria · 2010–2015</div>
         </div>
