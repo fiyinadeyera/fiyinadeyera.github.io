@@ -1035,19 +1035,17 @@ nav {
 .era-modern .contact { background: #fff; }
 .era-retro .contact { background: #000033; }
 
-.era-modern .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+.era-modern .contact-links { display: flex; flex-direction: row; gap: 1.25rem; }
 .era-modern .contact-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: #111827;
-  padding: 1rem 1.25rem;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   border-radius: 8px;
   border: 1.5px solid #e5e7eb;
-  max-width: 320px;
+  color: #374151;
+  text-decoration: none;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 .era-modern .contact-link:hover { border-color: #0D9488; color: #0D9488; background: #F0FDFA; }
@@ -1648,17 +1646,14 @@ src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK
     <div class="section-label">Contact</div>
     <p class="section-sub">Have a product problem, want to collaborate, or just want to connect. Reach out.</p>
     <div class="contact-links">
-      <a href="mailto:hi@fiyin.org" class="contact-link">
-        <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        hi@fiyin.org
-      </a>
-      <a href="https://linkedin.com/in/fiyinadeyera" target="_blank" class="contact-link">
+      <a href="https://linkedin.com/in/fiyinadeyera" target="_blank" class="contact-link" aria-label="LinkedIn">
         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 23.2 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        linkedin.com/in/fiyinadeyera
       </a>
-      <a href="https://www.behance.net/fiyin" target="_blank" class="contact-link">
+      <a href="https://github.com/fiyinadeyera" target="_blank" class="contact-link" aria-label="GitHub">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <a href="https://www.behance.net/fiyin" target="_blank" class="contact-link" aria-label="Behance">
         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029H23.726zm-7.726-5h4.5c-.07-1.675-1.196-2.346-2.325-2.346-1.271 0-2.099.75-2.175 2.346zM9.667 6.25c.648 0 1.234.019 1.75.06.523.043.951.129 1.297.26.346.13.625.324.833.576.209.254.378.554.508.9.129.346.193.73.193 1.15 0 .477-.103.875-.307 1.196-.204.32-.482.586-.831.797.615.224 1.09.572 1.422 1.043.332.47.5 1.041.5 1.713 0 .533-.117 1.016-.351 1.449-.234.431-.557.793-.967 1.084-.412.293-.893.508-1.443.644-.55.137-1.131.205-1.74.205H4.056V6.25h5.611zm-.291 5.25c.446 0 .826-.104 1.141-.311.314-.207.471-.557.471-1.049 0-.307-.061-.559-.183-.758a1.117 1.117 0 00-.477-.454 1.988 1.988 0 00-.658-.211 5.025 5.025 0 00-.742-.053H6.333V11.5h3.043zm.182 5.5c.291 0 .577-.028.859-.086.281-.059.534-.159.758-.299.223-.14.401-.336.535-.587.133-.252.2-.559.2-.921 0-.75-.207-1.252-.621-1.504-.414-.252-.969-.378-1.664-.378H6.333V17h3.225z"/></svg>
-        behance.net/fiyin
       </a>
     </div>
   </div>
