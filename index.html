@@ -492,34 +492,6 @@ nav {
   margin-bottom: 2rem;
 }
 
-/* ─────────────────────────────────────────────
-   ABOUT / STORY
-───────────────────────────────────────────── */
-.era-modern .about { background: #f9fafb; }
-.era-retro .about { background: #000022; border: 2px dashed #00ff00; margin: 0.5rem; border-radius: 0; }
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  margin-top: 2rem;
-}
-@media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
-
-.era-modern .about-text p {
-  color: #374151;
-  line-height: 1.85;
-  margin-bottom: 1.25rem;
-  font-size: 0.975rem;
-}
-.era-retro .about-text p {
-  color: #00ff00;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  font-size: 0.95rem;
-}
-
 /* Timeline */
 .timeline { display: flex; flex-direction: column; gap: 0; }
 .tl-item {
@@ -1075,7 +1047,6 @@ nav {
 /* ─────────────────────────────────────────────
    TESTIMONIAL
 ───────────────────────────────────────────── */
-.era-modern .about-personal { font-size: 0.875rem; color: #737373; margin-top: 1.5rem; line-height: 1.7; }
 .era-modern .testimonial {
   background: #F0FDFA;
   border-left: 4px solid #0D9488;
@@ -1291,6 +1262,7 @@ nav {
       Product Manager with 7+ years shipping software across Europe and the US,
       grounded in systems thinking, cross-functional execution, and a track record
       of turning complex problems into products people use.
+      Based in NYC. Open to collaboration and consulting engagements.
     </p>
     <div class="hero-actions">
       <a href="#work" class="btn-primary">View My Work</a>
@@ -1316,25 +1288,6 @@ src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK
   </div>
 </section>
 
-
-<!-- ════════════════════════════════════════════
-     ABOUT
-════════════════════════════════════════════ -->
-<section class="about">
-  <div class="section-inner">
-    <div class="section-label">About</div>
-    <h2 class="section-title retro-only">About Me!!! 😄</h2>
-    <div class="about-bio">
-      <p>
-        Product Manager with 7+ years shipping software across Europe and the US, turning complex problems into products people use through systems thinking and cross-functional execution. My route into tech ran through architecture and an MS in Product Development from RIT, but the work is what defines me now.
-      </p>
-      <p>
-        Based in NYC. Open to full-time PM roles and select consulting engagements.
-      </p>
-      <p class="about-personal modern-only">Outside work: music production, piano, tennis. Architecture and HCI training still shape how I approach problems.</p>
-    </div>
-  </div>
-</section>
 
 <!-- ════════════════════════════════════════════
      AI PROJECTS
