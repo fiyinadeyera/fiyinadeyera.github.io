@@ -1000,6 +1000,21 @@ nav {
   transition: background 0.2s;
 }
 .era-modern .music-link:hover { background: rgba(255,255,255,0.15); }
+/* KEYS video embed (works in both eras) */
+.music-video {
+  max-width: 640px;
+  margin: 0 0 1.75rem;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+}
+.music-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 .era-retro .music { background: #000066; padding: 50px 1.5rem; border: 3px solid #ff69b4; margin: 0.5rem; }
 .era-retro .music .section-title { color: #ff69b4; }
@@ -1667,6 +1682,30 @@ src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgK
 <!-- ════════════════════════════════════════════
      CONTACT
 ════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════
+     KEYS
+════════════════════════════════════════════ -->
+<section id="keys" class="music">
+  <div class="section-inner">
+    <div class="section-label">Music</div>
+    <h2 class="section-title">Keys</h2>
+    <p class="music-bio">
+      I've been playing keys for over a decade - grew up recording in my dad's studio and play mostly by ear. These days it's private events, churches, and bands around NYC.
+    </p>
+    <div class="music-video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/nS7458kMQSA"
+        title="Fiyin playing keys"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="music-links">
+      <a class="music-link" href="mailto:fiyinadeyera@outlook.com?subject=Keys%20booking">Email me for bookings</a>
+    </div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <div class="section-inner">
     <div class="section-label">Contact</div>
